@@ -20,7 +20,7 @@ class ImageProcessor(QWidget):
         self.resolutionEdit = Ui_MainWindow.resolutionLineEdit
         self.sizeLineEdit = Ui_MainWindow.sizeLineEdit
 
-        self.img_path = 'image/22.png'
+        self.img_path = 'resources/image/22.png'
         pixmap = QPixmap(self.img_path)
         pixmap = pixmap.scaled(500, 500)  # 适应显示区域
         self.imageLabel.setPixmap(pixmap)
