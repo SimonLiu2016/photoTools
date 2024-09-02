@@ -43,6 +43,9 @@ jobs:
           name: build-${{ matrix.os }}
           path: dist/main${{ matrix.extension }}
 
+      - name: List files in dist folder
+        run: ls dist/
+
   release:
     needs: build
     runs-on: ubuntu-latest
@@ -56,8 +59,8 @@ jobs:
         uses: softprops/action-gh-release@v1
         with:
           files: |
-            release/build-ubuntu-latest/main
-            release/build-windows-latest/main.exe
-            release/build-macos-latest/main.app
+            release/build-ubuntu-latest/Main
+            release/build-windows-latest/Main.exe
+            release/build-macos-latest/Main.app
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
