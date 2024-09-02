@@ -34,7 +34,7 @@ jobs:
 
       - name: Build with PyInstaller
         run: |
-          pyinstaller --onefile --add-data "resources/*:resources" main.py
+          pyinstaller --onefile --add-data "resources/*:resources" Main.py
         shell: bash
 
       - name: Upload artifact
