@@ -12,8 +12,6 @@ jobs:
       matrix:
         os: [windows-latest, macos-latest]
         include:
-          - os: ubuntu-latest
-            extension: ''
           - os: windows-latest
             extension: .exe
           - os: macos-latest
@@ -59,7 +57,6 @@ jobs:
         uses: softprops/action-gh-release@v1
         with:
           files: |
-            release/build-ubuntu-latest/Main
             release/build-windows-latest/Main.exe
             release/build-macos-latest/Main
         env:
