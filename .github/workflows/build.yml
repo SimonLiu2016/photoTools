@@ -62,5 +62,3 @@ jobs:
             release/build-ubuntu-latest/Main
             release/build-windows-latest/Main.exe
             release/build-macos-latest/Main
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
